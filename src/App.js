@@ -8,6 +8,7 @@ import Onboarding from "./Components/Onboarding";
 import PlayMusic from "./Components/PlayMusic";
 import Signin from "./Components/Signin";
 import Signup from "./Components/Signup";
+import UploadService from "./Components/UploadService";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/Signup" element={<Signup/>}></Route>
           <Route path="/Signin" element={<Signin/>}></Route>
           <Route path="/onboarding" element={<Onboarding/>}></Route>
+          <Route path="/upload-service" element={<UploadService />}></Route>
         </Routes>
       </Router>
       

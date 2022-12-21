@@ -1,19 +1,21 @@
 import React from 'react'
 import './Css/LinkPut.css'
 import { useState } from 'react'
-import {Link} from 'react-router-dom'
+import {Link, useLocation} from 'react-router-dom'
 import musicicon from './assests/icons8-music-32.png'
 import spotify from './assests/icons8-spotify-48.png'
 import Delete from  './assests/icons8-trash-32.png'
 import AddService from './assests/icons8-add-song-24.png'
 import youtube from './assests/icons8-youtube-48.png'
 import amazone from './assests/56-565024_amazon-logo-png-amazon-png-transparent-png-removebg-preview.png'
-
+import { useSelector , useDispatch } from 'react-redux'
+import handleFiles from '../fileReducer'
+import { deleteFile } from '../fileIndex'
 function LinkPut() {
   const [input, setInput] = useState("");
+  const files = useSelector((state)=> state.handleFiles)
+  const dispatch = useDispatch();
   
-
-
   return (
     <>
        <div className='PasteLinkPage'>
@@ -108,9 +110,27 @@ function LinkPut() {
                    <input onChange={(e)=>setInput(e.target.value)} value={input} className='second2input' type="text" placeholder='Enter Spotify URL' />
                 
                 </div>
+            {
+                files.length ?
+                files.map((fileData,index)=>{
+                    return <div key={index} className='second2 '>
+                    <div className='applogo'>
+                        <div className='applogoin'>
+                            <img style={{height:'3.5vmin'}} src={fileData.file} alt="" />
+                            <p>{fileData.title}</p>
+                        </div>
+                        <img style={{height:'3.2vmin',cursor:'pointer'}} onClick={()=> {dispatch(deleteFile(index))}} src={Delete} alt="" />
+                    </div>
+                <input onChange={(e)=>setInput(e.target.value)} value={input} className='second2input' type="text" placeholder='Enter URL' />
+           
+             </div>
+                })
+             :
+             <></>
+            }
                 <div className='second3'>
                     <img style={{height:'3.2vmin'}}  src={AddService} alt="" />
-                    <p>Add services</p>
+                    <Link to='/upload-service' className='button'>Add services</Link>
                 </div>
             </div>
        </div>

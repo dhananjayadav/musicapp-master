@@ -6,16 +6,16 @@
 }
 .PasteLinkPage{
     width: 100%;
-    height: 200vmin;
     background-color: rgb(23,22,23);
     display: flex;
     flex-direction: column;align-items: center;
+    padding: 5vmin;
 }
 
 .SecondBox{
     margin-top: 2vmin;
     width: 60vmin;
-    height: 119vmin;
+    /* height: 119vmin; */
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -90,4 +90,10 @@
 }
 .seven> .applogo > .applogoin > p{
     color: orange;
+}
+.button{
+    height: 5vmin;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
 }
