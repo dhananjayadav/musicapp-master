@@ -1,0 +1,77 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.InputPage{
+    width: 100%;
+    height: 100vmin;
+    background-color: rgb(23,22,23);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imagebox{
+    width: 60vmin;
+    height: 66vmin;
+    background-color: white;
+    border-radius: 0.5vmin;
+    padding: 2vmin;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* overflow: hidden; */
+}
+.imagebox  > p{
+    font-size: 3.5vmin;
+    
+}
+.imagebox > label{
+    cursor: pointer;
+    color: blue;
+    /* border: 2px solid black; */
+    font-size: 2.5vmin;
+    margin-top: -9vmin;
+}
+.title{
+    /* height: 30%; */
+    margin-top: 5vmin;
+    border-top: 1px solid grey;
+    width: 60vmin;
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+}
+.title > div  > h1{
+    margin-top: 3vmin;
+}
+.title > div > input{
+    width: 25vmin;
+    height: 4vmin;
+    text-align: center;
+    border: none;
+    background-color: rgb(236, 225, 225);
+    margin-top: 2vmin;
+    outline: none;
+}
+.UploadSaveBtn{
+    margin-top: 6vmin;
+    width: 20vmin;
+    height: 7vmin;
+    font-size: 2.5vmin;
+    border: none;
+    background-color: #3B5BDB;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.imagetitle{
+    margin-left: 1vmin;
+}
+.artist{
+    margin-right: 1vmin;
+}
